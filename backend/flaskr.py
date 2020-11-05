@@ -272,6 +272,7 @@ def create_app(test_config=None):
             for question in questions:
                 if question.id == previous:
                     questions.remove(question)
+                    break
 
         random.shuffle(questions)
         question = questions[random.randrange(0, len(questions), 1)]
